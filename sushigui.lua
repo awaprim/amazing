@@ -229,19 +229,17 @@ spawn(function()
        
        if Player.attributes.Energy.Value == 0 then
     _G.FireClickers = false;
-    wait(1)
-    warn("Too tired.. sitting.")
+    wait(0.2)
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11)
     repeat wait() until Player.attributes.Energy.Value == 200
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    wait(1)
+    wait(0.5)
     if secondstation == false then
         Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
     else
         Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
     end
-    warn("Ready to go!")
-    wait(1)
+    wait(0.2)
     if stoppeds == true then break end
     _G.FireClickers = true; -- Start
        end
@@ -310,15 +308,13 @@ spawn(function()
        
        if Player.attributes.Energy.Value == 0 then 
     _G.FireClicker = false; 
-    wait(1)
-    warn("Too tired.. sitting.")
+    wait(0.2)
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11) 
     repeat wait() until Player.attributes.Energy.Value == 200 
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    wait(1)
+    wait(0.5)
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711) 
-    warn("Ready to go!")
-    wait(1)
+    wait(0.2)
     if stopped == true then break end
     _G.FireClicker = true; 
        end
