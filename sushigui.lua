@@ -1,7 +1,15 @@
--- Gui to Lua
--- Version: 3.2
+if _G.loadedgui == true then
+    wait(1)
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "Its already loaded"; 
+    Text = ""; 
+    Duration = 5; 
+    })
+else
 
--- Instances:
+local Player = game.Players.LocalPlayer
+
+
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -13,11 +21,9 @@ local midst = Instance.new("TextButton")
 local spawnst = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local tplol = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
+local useless1 = Instance.new("TextLabel")
+local useless2 = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
-
---Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
@@ -126,27 +132,278 @@ tplol.Text = ""
 tplol.TextColor3 = Color3.fromRGB(0, 0, 0)
 tplol.TextSize = 14.000
 
-TextLabel_2.Parent = tplol
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(-0.13222456, 0, 0.309523821, 0)
-TextLabel_2.Size = UDim2.new(0, 81, 0, 33)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "at start of auto"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 12.000
+useless1.Name = "useless1"
+useless1.Parent = tplol
+useless1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+useless1.BackgroundTransparency = 1.000
+useless1.BorderSizePixel = 0
+useless1.Position = UDim2.new(-0.13222456, 0, 0.309523821, 0)
+useless1.Size = UDim2.new(0, 81, 0, 33)
+useless1.Font = Enum.Font.SourceSans
+useless1.Text = "at start of auto"
+useless1.TextColor3 = Color3.fromRGB(0, 0, 0)
+useless1.TextSize = 12.000
 
-TextLabel_3.Parent = tplol
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.0475398339, 0, -0.00892853737, 0)
-TextLabel_3.Size = UDim2.new(0, 61, 0, 30)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "tp to station"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextSize = 13.000
+useless2.Name = "useless2"
+useless2.Parent = tplol
+useless2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+useless2.BackgroundTransparency = 1.000
+useless2.BorderSizePixel = 0
+useless2.Position = UDim2.new(0.0475398339, 0, -0.00892853737, 0)
+useless2.Size = UDim2.new(0, 61, 0, 30)
+useless2.Font = Enum.Font.SourceSans
+useless2.Text = "tp to station"
+useless2.TextColor3 = Color3.fromRGB(0, 0, 0)
+useless2.TextSize = 13.000
 
 UICorner.CornerRadius = UDim.new(0.100000001, 0)
 UICorner.Parent = tplol
+
+-------------------------------------------------------------------------
+
+Frame.Visible = false
+Frame.Active = true
+Frame.Draggable = true
+stopped = true
+stoppeds = true
+secondstation = false
+TextLabel.Text = 'Current: Spawn'
+togglecook_Roundify_4px.ImageColor3=Color3.new(1, 0.380392, 0.258824)
+togglesink_Roundify_4px.ImageColor3=Color3.new(1, 0.380392, 0.258824)
+tplol.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+tpenables = true
+togglecook.MouseButton1Click:Connect(function()
+    if stopped == false then
+        stopped = true
+        _G.FireClicker = false
+        togglesink_Roundify_4px.ImageColor3=Color3.new(1, 0.380392, 0.258824)
+    end
+    
+
+    if stoppeds == false then
+        stoppeds = true
+        _G.FireClickers = false
+        togglecook_Roundify_4px.ImageColor3=Color3.new(1, 0.380392, 0.258824)
+    else
+        stoppeds = false
+        togglecook_Roundify_4px.ImageColor3=Color3.new(0.482353, 1, 0.811765)
+        if tpenables == true then
+        wait(0.1)
+        if secondstation == false then
+            Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
+        else
+            Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
+        end
+        end
+    end
+
+
+    if stoppeds == true then 
+        _G.FireClickers = false
+
+    end
+    
+    
+    
+    
+    wait(0.5)
+
+-------------------------------------------------------------
+
+
+local descendants = game.Workspace.Game:GetDescendants()
+local Player = game.Players.LocalPlayer
+
+_G.FireClickers = true;
+
+spawn(function()
+
+
+   while _G.FireClickers do
+
+    while true do
+        wait(0.01)
+        if stoppeds == true then break end
+
+       
+       
+       if Player.attributes.Energy.Value == 0 then
+    _G.FireClickers = false;
+    wait(1)
+    warn("Too tired.. sitting.")
+    Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11)
+    repeat wait() until Player.attributes.Energy.Value == 200
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+    if secondstation == false then
+        Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
+    else
+        Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
+    end
+    warn("Ready to go!")
+    wait(1)
+    if stoppeds == true then break end
+    _G.FireClickers = true; -- Start
+       end
+       wait()
+       if stoppeds == true then break end
+       
+       for index, descendant in pairs(descendants) do
+        if descendant.Name == "Spawn2" then 
+           local cookstation = descendant.Parent;
+           local clickyofcookstation = cookstation:FindFirstChildOfClass("ClickDetector") 
+           fireclickdetector(clickyofcookstation); 
+        end
+       end
+   end
+end
+end)
+--------------------------------------------------
+end)
+
+
+
+togglesink.MouseButton1Click:Connect(function()
+    
+    if stoppeds == false then
+        stoppeds = true
+        _G.FireClicker = false
+        togglesink_Roundify_4px.ImageColor3=Color3.new(1, 0.380392, 0.258824)
+    end
+
+    
+    if stopped == false then
+        stopped = true
+        _G.FireClicker = false
+        togglesink_Roundify_4px.ImageColor3=Color3.new(1, 0.380392, 0.258824)
+    else
+        stopped = false
+        togglesink_Roundify_4px.ImageColor3=Color3.new(0.482353, 1, 0.811765)
+        if tpenables == true then
+        wait(0.1)
+        Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711) 
+        end
+    end
+
+
+    if stopped == true then 
+        _G.FireClicker = false
+    end
+
+
+    wait(0.5)
+
+
+    local descendants = game.Workspace.Game:GetDescendants()
+local Player = game.Players.LocalPlayer
+
+_G.FireClicker = true;
+
+spawn(function()
+
+
+   while _G.FireClicker do 
+    while true do
+        wait(0.01)
+        if stopped == true then break end
+       
+       
+       if Player.attributes.Energy.Value == 0 then 
+    _G.FireClicker = false; 
+    wait(1)
+    warn("Too tired.. sitting.")
+    Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11) 
+    repeat wait() until Player.attributes.Energy.Value == 200 
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+    wait(1)
+    Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711) 
+    warn("Ready to go!")
+    wait(1)
+    if stopped == true then break end
+    _G.FireClicker = true; 
+       end
+       wait(0.01)
+       if stopped == true then break end
+       
+       for index, descendant in pairs(descendants) do
+        if descendant.Name == "Water2" then 
+           local sink = descendant.Parent;
+           local clickyofsink = sink:FindFirstChildOfClass("ClickDetector") 
+           fireclickdetector(clickyofsink); 
+        end
+       end
+   end
+end
+end)
+
+
+
+
+end)
+
+
+
+spawnst.MouseButton1Click:Connect(function()
+    
+    secondstation = false
+    TextLabel.Text = 'Current: Spawn'
+
+
+
+
+end)
+
+midst.MouseButton1Click:Connect(function()
+    
+    secondstation = true
+    TextLabel.Text = 'Current: Middle'
+
+
+
+
+end)
+
+
+
+
+tplol.MouseButton1Click:Connect(function()
+
+    if tpenables == false then
+        tpenables = true
+        tplol.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+    else
+        tpenables = false
+        tplol.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+    end
+
+
+
+
+end)
+
+
+
+function onKeyPress(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.Home then
+        if closed == true then return end
+        if Frame.Visible == false then
+            Frame.Visible = true
+        else
+            Frame.Visible = false
+            end
+        end
+    end
+    
+    game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+
+    wait(1)
+
+    _G.loadedgui = true
+
+    wait(1)
+    Frame.Visible = true
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "Correctly loaded!";
+    Text = "Press home to hide."; 
+    Duration = 10; 
+    })
+end
