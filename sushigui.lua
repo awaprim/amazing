@@ -267,7 +267,7 @@ togglesink.MouseButton1Click:Connect(function()
     if stoppeds == false then
         stoppeds = true
         _G.FireClicker = false
-        togglesink_Roundify_4px.ImageColor3=Color3.new(1, 0.380392, 0.258824)
+        togglecook_Roundify_4px.ImageColor3=Color3.new(1, 0.380392, 0.258824)
     end
 
     
