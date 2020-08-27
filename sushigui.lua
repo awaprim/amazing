@@ -234,6 +234,7 @@ spawn(function()
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11)
     repeat wait() until Player.attributes.Energy.Value == 200
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
+    wait(1)
     if secondstation == false then
         Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
     else
