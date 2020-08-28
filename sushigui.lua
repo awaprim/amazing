@@ -675,6 +675,7 @@ spawn(function()
        if cantcook == true then
         wait(0.01)
         if alreadytpedd == false then
+            wait(0.2)
             alreadytpedd = true
             alreadytpeda = false
             Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
@@ -693,6 +694,7 @@ spawn(function()
            
         else
         if alreadytpeda == false then
+            wait(0.2)
             alreadytpeda = true
             alreadytpedd = false
             if stguisecmiddle == false then
