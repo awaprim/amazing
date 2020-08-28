@@ -231,7 +231,7 @@ version.BorderSizePixel = 0
 version.Position = UDim2.new(0.0675675645, 0, 0.886904776, 0)
 version.Size = UDim2.new(0, 82, 0, 19)
 version.Font = Enum.Font.SourceSans
-version.Text = "Current version: 1.51"
+version.Text = "Current version: 1.52"
 version.TextColor3 = Color3.fromRGB(0, 0, 0)
 version.TextSize = 14.000
 
@@ -248,7 +248,7 @@ cookdayni.BorderSizePixel = 0
 cookdayni.Position = UDim2.new(0.146666661, 0, 0.125714272, 0)
 cookdayni.Size = UDim2.new(0, 159, 0, 45)
 cookdayni.Font = Enum.Font.SourceSans
-cookdayni.Text = "Use sink in night, in day cooking"
+cookdayni.Text = "Use sink in night in day cooking"
 cookdayni.TextColor3 = Color3.fromRGB(0, 0, 0)
 cookdayni.TextSize = 14.000
 
@@ -383,17 +383,17 @@ spawn(function()
        
        if Player.attributes.Energy.Value == 0 then
     _G.FireClickers = false;
-    wait(0.2)
+    wait(0.03)
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11)
     repeat wait() until Player.attributes.Energy.Value == 200
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    wait(0.5)
+    wait(0.2)
     if secondstation == false then
         Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
     else
         Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
     end
-    wait(0.2)
+    wait(0.03)
     if stoppeds == true then break end
     _G.FireClickers = true; -- Start
        end
@@ -401,7 +401,7 @@ spawn(function()
        if stoppeds == true then break end
        if tognight == true then
        if cantcook == true then
-        wait(0.1)
+        wait(0.03)
             
            
         else
@@ -451,7 +451,7 @@ togglesink.MouseButton1Click:Connect(function()
         stopped = false
         togglesink_Roundify_4px.ImageColor3=Color3.new(0.482353, 1, 0.811765)
         if tpenables == true then
-        wait(0.1)
+        wait(0.03)
         Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711) 
         end
     end
@@ -481,17 +481,17 @@ spawn(function()
        
        if Player.attributes.Energy.Value == 0 then 
     _G.FireClicker = false; 
-    wait(0.2)
+    wait(0.03)
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11) 
     repeat wait() until Player.attributes.Energy.Value == 200 
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    wait(0.5)
+    wait(0.2)
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711) 
     wait(0.2)
     if stopped == true then break end
     _G.FireClicker = true; 
        end
-       wait(0.01)
+       wait(0.03)
        if stopped == true then break end
        
        for index, descendant in pairs(descendants) do
@@ -605,7 +605,7 @@ cookdayni.MouseButton1Click:Connect(function()
     if cookingnightday == false then
         cookdayni.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
         cookingnightday = true
-            wait(0.1)
+            wait(0.03)
             if cantcook == true then
                 Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
             else
@@ -629,7 +629,7 @@ cookdayni.MouseButton1Click:Connect(function()
 
     end
      
-    wait(0.5)
+    wait(0.03)
 -------------------------------------------------------------
 
 
@@ -651,11 +651,11 @@ spawn(function()
        
        if Player.attributes.Energy.Value == 0 then
     _G.FireClickere = false;
-    wait(0.2)
+    wait(0.03)
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11)
     repeat wait() until Player.attributes.Energy.Value == 200
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    wait(0.5)
+    wait(0.2)
    --
    if cantcook == true then
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
@@ -666,7 +666,7 @@ spawn(function()
         Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
     end
     end
-    wait(0.2)
+    wait(0.03)
     if cookingnightday == false then break end
     _G.FireClickere = true; 
        end
