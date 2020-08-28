@@ -9,8 +9,6 @@ else
 
 local Player = game.Players.LocalPlayer
 
-
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local togglecook = Instance.new("TextButton")
@@ -31,7 +29,7 @@ local uslesssss = Instance.new("TextLabel")
 local uselesss = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
 local UICornerr = Instance.new("UICorner")
-
+local version = Instance.new("TextLabel")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
@@ -45,7 +43,7 @@ togglecook.Parent = Frame
 togglecook.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
 togglecook.BackgroundTransparency = 1.000
 togglecook.BorderSizePixel = 0
-togglecook.Position = UDim2.new(0.135110348, 0, 0.347619087, 0)
+togglecook.Position = UDim2.new(0.0675427839, 0, 0.341666698, 0)
 togglecook.Size = UDim2.new(0, 109, 0, 35)
 togglecook.ZIndex = 2
 togglecook.Font = Enum.Font.SourceSans
@@ -73,7 +71,7 @@ togglesink.Parent = Frame
 togglesink.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
 togglesink.BackgroundTransparency = 1.000
 togglesink.BorderSizePixel = 0
-togglesink.Position = UDim2.new(0.130515739, 0, 0.0840476155, 0)
+togglesink.Position = UDim2.new(0.0674526766, 0, 0.107857138, 0)
 togglesink.Size = UDim2.new(0, 110, 0, 35)
 togglesink.ZIndex = 2
 togglesink.Font = Enum.Font.SourceSans
@@ -100,7 +98,7 @@ midst.Name = "midst"
 midst.Parent = Frame
 midst.BackgroundColor3 = Color3.fromRGB(205, 255, 140)
 midst.BorderSizePixel = 0
-midst.Position = UDim2.new(0.0540540554, 0, 0.726190448, 0)
+midst.Position = UDim2.new(0.0855855867, 0, 0.684523761, 0)
 midst.Size = UDim2.new(0, 78, 0, 34)
 midst.Font = Enum.Font.SourceSans
 midst.Text = "Middle station"
@@ -115,7 +113,7 @@ spawnst.Name = "spawnst"
 spawnst.Parent = Frame
 spawnst.BackgroundColor3 = Color3.fromRGB(205, 255, 140)
 spawnst.BorderSizePixel = 0
-spawnst.Position = UDim2.new(0.540540516, 0, 0.726190448, 0)
+spawnst.Position = UDim2.new(0.527027011, 0, 0.684523761, 0)
 spawnst.Size = UDim2.new(0, 78, 0, 34)
 spawnst.Font = Enum.Font.SourceSans
 spawnst.Text = "Spawn station"
@@ -211,12 +209,24 @@ uselesss.Text = "in night"
 uselesss.TextColor3 = Color3.fromRGB(0, 0, 0)
 uselesss.TextSize = 14.000
 
-UICorner.CornerRadius = UDim.new(0.0599999987, 0)
+UICorner.CornerRadius = UDim.new(0, 6)
 UICorner.Parent = dontcooknight
 
 UICornerr.CornerRadius = UDim.new(0.0599999987, 0)
 UICornerr.Name = "UICornerr"
 UICornerr.Parent = Frame
+
+version.Name = "version"
+version.Parent = Frame
+version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+version.BackgroundTransparency = 1.000
+version.BorderSizePixel = 0
+version.Position = UDim2.new(0.0675675645, 0, 0.886904776, 0)
+version.Size = UDim2.new(0, 82, 0, 19)
+version.Font = Enum.Font.SourceSans
+version.Text = "Current version: 1.41"
+version.TextColor3 = Color3.fromRGB(0, 0, 0)
+version.TextSize = 14.000
 
 -------------------------------------------------------------------------
 
