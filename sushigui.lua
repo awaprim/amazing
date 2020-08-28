@@ -18,12 +18,20 @@ local togglecook_Roundify_4px = Instance.new("ImageLabel")
 local togglesink = Instance.new("TextButton")
 local togglesink_Roundify_4px = Instance.new("ImageLabel")
 local midst = Instance.new("TextButton")
+local UICorners = Instance.new("UICorner")
 local spawnst = Instance.new("TextButton")
+local UICornera = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local tplol = Instance.new("TextButton")
 local useless1 = Instance.new("TextLabel")
 local useless2 = Instance.new("TextLabel")
+local UICornerd = Instance.new("UICorner")
+local dontcooknight = Instance.new("TextButton")
+local uslesssss = Instance.new("TextLabel")
+local uselesss = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
+local UICornerr = Instance.new("UICorner")
+
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
@@ -99,6 +107,10 @@ midst.Text = "Middle station"
 midst.TextColor3 = Color3.fromRGB(0, 0, 0)
 midst.TextSize = 14.000
 
+UICorners.CornerRadius = UDim.new(0, 6)
+UICorners.Name = "UICorners"
+UICorners.Parent = midst
+
 spawnst.Name = "spawnst"
 spawnst.Parent = Frame
 spawnst.BackgroundColor3 = Color3.fromRGB(205, 255, 140)
@@ -109,6 +121,10 @@ spawnst.Font = Enum.Font.SourceSans
 spawnst.Text = "Spawn station"
 spawnst.TextColor3 = Color3.fromRGB(0, 0, 0)
 spawnst.TextSize = 14.000
+
+UICornera.CornerRadius = UDim.new(0, 6)
+UICornera.Name = "UICornera"
+UICornera.Parent = spawnst
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -125,8 +141,8 @@ tplol.Name = "tplol"
 tplol.Parent = Frame
 tplol.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
 tplol.BorderSizePixel = 0
-tplol.Position = UDim2.new(0.656756699, 0, 0.22023809, 0)
-tplol.Size = UDim2.new(0, 65, 0, 48)
+tplol.Position = UDim2.new(0.656756699, 0, 0.0840475932, 0)
+tplol.Size = UDim2.new(0, 65, 0, 44)
 tplol.Font = Enum.Font.SourceSans
 tplol.Text = ""
 tplol.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -149,15 +165,58 @@ useless2.Parent = tplol
 useless2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 useless2.BackgroundTransparency = 1.000
 useless2.BorderSizePixel = 0
-useless2.Position = UDim2.new(0.0475398339, 0, -0.00892853737, 0)
+useless2.Position = UDim2.new(0.0167706031, 0, -0.00892853737, 0)
 useless2.Size = UDim2.new(0, 61, 0, 30)
 useless2.Font = Enum.Font.SourceSans
 useless2.Text = "tp to station"
 useless2.TextColor3 = Color3.fromRGB(0, 0, 0)
 useless2.TextSize = 13.000
 
-UICorner.CornerRadius = UDim.new(0.100000001, 0)
-UICorner.Parent = tplol
+UICornerd.CornerRadius = UDim.new(0, 6)
+UICornerd.Name = "UICornerd"
+UICornerd.Parent = tplol
+
+dontcooknight.Name = "dontcooknight"
+dontcooknight.Parent = Frame
+dontcooknight.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+dontcooknight.BorderSizePixel = 0
+dontcooknight.Position = UDim2.new(0.657657683, 0, 0.375, 0)
+dontcooknight.Size = UDim2.new(0, 64, 0, 43)
+dontcooknight.Font = Enum.Font.SourceSans
+dontcooknight.Text = ""
+dontcooknight.TextColor3 = Color3.fromRGB(0, 0, 0)
+dontcooknight.TextSize = 14.000
+
+uslesssss.Name = "uslesssss"
+uslesssss.Parent = dontcooknight
+uslesssss.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uslesssss.BackgroundTransparency = 1.000
+uslesssss.BorderSizePixel = 0
+uslesssss.Position = UDim2.new(0.0625, 0, 0.116279125, 0)
+uslesssss.Size = UDim2.new(0, 57, 0, 14)
+uslesssss.Font = Enum.Font.SourceSans
+uslesssss.Text = "dont cook"
+uslesssss.TextColor3 = Color3.fromRGB(0, 0, 0)
+uslesssss.TextSize = 14.000
+
+uselesss.Name = "uselesss"
+uselesss.Parent = dontcooknight
+uselesss.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uselesss.BackgroundTransparency = 1.000
+uselesss.BorderSizePixel = 0
+uselesss.Position = UDim2.new(-0.015625, 0, 0.409090817, 0)
+uselesss.Size = UDim2.new(0, 59, 0, 19)
+uselesss.Font = Enum.Font.SourceSans
+uselesss.Text = "in night"
+uselesss.TextColor3 = Color3.fromRGB(0, 0, 0)
+uselesss.TextSize = 14.000
+
+UICorner.CornerRadius = UDim.new(0.0599999987, 0)
+UICorner.Parent = dontcooknight
+
+UICornerr.CornerRadius = UDim.new(0.0599999987, 0)
+UICornerr.Name = "UICornerr"
+UICornerr.Parent = Frame
 
 -------------------------------------------------------------------------
 
@@ -172,6 +231,8 @@ togglecook_Roundify_4px.ImageColor3=Color3.new(1, 0.380392, 0.258824)
 togglesink_Roundify_4px.ImageColor3=Color3.new(1, 0.380392, 0.258824)
 tplol.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
 tpenables = true
+tognight = true
+dontcooknight.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
 togglecook.MouseButton1Click:Connect(function()
     if stopped == false then
         stopped = true
@@ -245,6 +306,13 @@ spawn(function()
        end
        wait()
        if stoppeds == true then break end
+       if tognight == true then
+       if cantcook == true then
+        wait(0.1)
+            
+           
+        else
+
        
        for index, descendant in pairs(descendants) do
         if descendant.Name == "Spawn2" then 
@@ -254,6 +322,18 @@ spawn(function()
         end
        end
    end
+    else
+        for index, descendant in pairs(descendants) do
+            if descendant.Name == "Spawn2" then 
+               local cookstation = descendant.Parent;
+               local clickyofcookstation = cookstation:FindFirstChildOfClass("ClickDetector") 
+               fireclickdetector(clickyofcookstation); 
+            end
+        end
+
+
+end
+end
 end
 end)
 --------------------------------------------------
@@ -378,6 +458,20 @@ tplol.MouseButton1Click:Connect(function()
 end)
 
 
+dontcooknight.MouseButton1Click:Connect(function()
+
+    if tognight == false then
+        tognight = true
+        dontcooknight.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+    else
+        tognight = false
+        dontcooknight.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+    end
+
+
+end)
+
+
 
 function onKeyPress(inputObject, gameProcessedEvent)
     if inputObject.KeyCode == Enum.KeyCode.Home then
@@ -394,6 +488,7 @@ function onKeyPress(inputObject, gameProcessedEvent)
 
     wait(1)
 
+
     _G.loadedgui = true
 
     wait(1)
@@ -403,4 +498,16 @@ function onKeyPress(inputObject, gameProcessedEvent)
     Text = "Press home to hide."; 
     Duration = 10; 
     })
+end
+
+while true do
+    wait(0.1)
+    if game:GetService("Workspace").Time.SurfaceGui.TextLabel.Text == '11:00 PM' then
+        cantcook = true
+       end
+
+       if game:GetService("Workspace").Time.SurfaceGui.TextLabel.Text == '10:00 AM' then
+        cantcook = false
+       end
+
 end
