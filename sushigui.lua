@@ -248,7 +248,7 @@ cookdayni.BorderSizePixel = 0
 cookdayni.Position = UDim2.new(0.146666661, 0, 0.125714272, 0)
 cookdayni.Size = UDim2.new(0, 159, 0, 45)
 cookdayni.Font = Enum.Font.SourceSans
-cookdayni.Text = "Use sink in night in day cooking"
+cookdayni.Text = "Use sink in night, cook in day"
 cookdayni.TextColor3 = Color3.fromRGB(0, 0, 0)
 cookdayni.TextSize = 14.000
 
