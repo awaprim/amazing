@@ -224,7 +224,7 @@ version.BorderSizePixel = 0
 version.Position = UDim2.new(0.0675675645, 0, 0.886904776, 0)
 version.Size = UDim2.new(0, 82, 0, 19)
 version.Font = Enum.Font.SourceSans
-version.Text = "Current version: 1.41 (found bug will fix tomr)"
+version.Text = "Current version: 1.42"
 version.TextColor3 = Color3.fromRGB(0, 0, 0)
 version.TextSize = 14.000
 
@@ -508,7 +508,7 @@ function onKeyPress(inputObject, gameProcessedEvent)
     Text = "Press home to hide."; 
     Duration = 10; 
     })
-end
+
 
 while true do
     wait(0.1)
@@ -520,4 +520,5 @@ while true do
         cantcook = false
        end
 
+end
 end
