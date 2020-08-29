@@ -242,7 +242,7 @@ version.BorderSizePixel = 0
 version.Position = UDim2.new(0.0675675645, 0, 0.886904776, 0)
 version.Size = UDim2.new(0, 82, 0, 19)
 version.Font = Enum.Font.SourceSans
-version.Text = "Current version: 1.6"
+version.Text = "Current version: 1.53"
 version.TextColor3 = Color3.fromRGB(0, 0, 0)
 version.TextSize = 14.000
 
@@ -640,7 +640,7 @@ cookdayni.MouseButton1Click:Connect(function()
 
     end
      
-    wait(0.03)
+    wait(0.23)
 -------------------------------------------------------------
 
 
@@ -686,7 +686,7 @@ spawn(function()
        if cantcook == true then
         wait(0.01)
         if alreadytpedd == false then
-            wait(0.02)
+            wait(0.2)
             Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
             alreadytpedd = true
             alreadytpeda = false
@@ -705,7 +705,7 @@ spawn(function()
            
         else
         if alreadytpeda == false then
-            wait(0.02)
+            wait(0.2)
             if stguisecmiddle == false then
                 Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
             else
