@@ -242,7 +242,7 @@ version.BorderSizePixel = 0
 version.Position = UDim2.new(0.0675675645, 0, 0.886904776, 0)
 version.Size = UDim2.new(0, 82, 0, 19)
 version.Font = Enum.Font.SourceSans
-version.Text = "Current version: 1.53"
+version.Text = "Current version: 1.56"
 version.TextColor3 = Color3.fromRGB(0, 0, 0)
 version.TextSize = 14.000
 
@@ -687,9 +687,9 @@ spawn(function()
         wait(0.01)
         if alreadytpedd == false then
             wait(0.2)
+            Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
             alreadytpedd = true
             alreadytpeda = false
-            Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
             wait(0.1)
         end
         
@@ -706,13 +706,13 @@ spawn(function()
         else
         if alreadytpeda == false then
             wait(0.2)
-            alreadytpeda = true
-            alreadytpedd = false
             if stguisecmiddle == false then
                 Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
             else
                 Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
             end
+            alreadytpeda = true
+            alreadytpedd = false
             wait(0.1)
         end
        
