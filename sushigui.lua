@@ -248,7 +248,7 @@ version.BorderSizePixel = 0
 version.Position = UDim2.new(0.0675675645, 0, 0.886904776, 0)
 version.Size = UDim2.new(0, 82, 0, 19)
 version.Font = Enum.Font.SourceSans
-version.Text = "Current version: 1.7"
+version.Text = "Current version: 1.71"
 version.TextColor3 = Color3.fromRGB(0, 0, 0)
 version.TextSize = 14.000
 
@@ -748,7 +748,7 @@ spawn(function()
             alreadytpedd = true
             alreadytpeda = false
             wait(0.1)
-        end
+        else
         
         
         
@@ -758,6 +758,7 @@ spawn(function()
                local clickyofsink = sink:FindFirstChildOfClass("ClickDetector") 
                fireclickdetector(clickyofsink); 
             end
+        end
         end
            
         else
@@ -771,7 +772,7 @@ spawn(function()
             alreadytpeda = true
             alreadytpedd = false
             wait(0.1)
-        end
+        else
        
        for index, descendant in pairs(descendants) do
         if descendant.Name == "Spawn2" then 
@@ -780,6 +781,7 @@ spawn(function()
            fireclickdetector(clickyofcookstation); 
         end
        end
+    end
    end
 
 end
