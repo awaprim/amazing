@@ -7,7 +7,19 @@ if _G.loadedgui == true then
     })
 else
 
+    repeat wait(0.1) until game:GetService("Players").LocalPlayer wait(2)
+
+    game:GetService("Players").LocalPlayer.Idled:connect(function()
+    	game:GetService("VirtualUser"):CaptureController()
+    	game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+    end)
+
+
+
+
+
 local Player = game.Players.LocalPlayer
+
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -28,15 +40,25 @@ local dontcooknight = Instance.new("TextButton")
 local uslesssss = Instance.new("TextLabel")
 local uselesss = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
-local UICornerr = Instance.new("UICorner")
 local version = Instance.new("TextLabel")
+local secondgui = Instance.new("Frame")
+local cookdayni = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local stationselcookday = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local guifir = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
+local secgui = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local assadsa = Instance.new("UICorner")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 177, 42)
-Frame.Position = UDim2.new(0.665594876, 0, 0.271186441, 0)
-Frame.Size = UDim2.new(0, 222, 0, 168)
+Frame.Position = UDim2.new(0.71302253, 0, 0.334745765, 0)
+Frame.Size = UDim2.new(0, 222, 0, 177)
 
 togglecook.Name = "togglecook"
 togglecook.Parent = Frame
@@ -71,7 +93,7 @@ togglesink.Parent = Frame
 togglesink.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
 togglesink.BackgroundTransparency = 1.000
 togglesink.BorderSizePixel = 0
-togglesink.Position = UDim2.new(0.0674526766, 0, 0.107857138, 0)
+togglesink.Position = UDim2.new(0.0629481748, 0, 0.10785713, 0)
 togglesink.Size = UDim2.new(0, 110, 0, 35)
 togglesink.ZIndex = 2
 togglesink.Font = Enum.Font.SourceSans
@@ -105,7 +127,7 @@ midst.Text = "Middle station"
 midst.TextColor3 = Color3.fromRGB(0, 0, 0)
 midst.TextSize = 14.000
 
-UICorners.CornerRadius = UDim.new(0, 6)
+UICorners.CornerRadius = UDim.new(0.0599999987, 0)
 UICorners.Name = "UICorners"
 UICorners.Parent = midst
 
@@ -120,7 +142,7 @@ spawnst.Text = "Spawn station"
 spawnst.TextColor3 = Color3.fromRGB(0, 0, 0)
 spawnst.TextSize = 14.000
 
-UICornera.CornerRadius = UDim.new(0, 6)
+UICornera.CornerRadius = UDim.new(0.0599999987, 0)
 UICornera.Name = "UICornera"
 UICornera.Parent = spawnst
 
@@ -139,7 +161,7 @@ tplol.Name = "tplol"
 tplol.Parent = Frame
 tplol.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
 tplol.BorderSizePixel = 0
-tplol.Position = UDim2.new(0.656756699, 0, 0.0840475932, 0)
+tplol.Position = UDim2.new(0.625225186, 0, 0.106646463, 0)
 tplol.Size = UDim2.new(0, 65, 0, 44)
 tplol.Font = Enum.Font.SourceSans
 tplol.Text = ""
@@ -170,7 +192,7 @@ useless2.Text = "tp to station"
 useless2.TextColor3 = Color3.fromRGB(0, 0, 0)
 useless2.TextSize = 13.000
 
-UICornerd.CornerRadius = UDim.new(0, 6)
+UICornerd.CornerRadius = UDim.new(0.0599999987, 0)
 UICornerd.Name = "UICornerd"
 UICornerd.Parent = tplol
 
@@ -178,7 +200,7 @@ dontcooknight.Name = "dontcooknight"
 dontcooknight.Parent = Frame
 dontcooknight.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
 dontcooknight.BorderSizePixel = 0
-dontcooknight.Position = UDim2.new(0.657657683, 0, 0.375, 0)
+dontcooknight.Position = UDim2.new(0.630630672, 0, 0.375, 0)
 dontcooknight.Size = UDim2.new(0, 64, 0, 43)
 dontcooknight.Font = Enum.Font.SourceSans
 dontcooknight.Text = ""
@@ -209,12 +231,8 @@ uselesss.Text = "in night"
 uselesss.TextColor3 = Color3.fromRGB(0, 0, 0)
 uselesss.TextSize = 14.000
 
-UICorner.CornerRadius = UDim.new(0, 6)
+UICorner.CornerRadius = UDim.new(0.0599999987, 0)
 UICorner.Parent = dontcooknight
-
-UICornerr.CornerRadius = UDim.new(0.0599999987, 0)
-UICornerr.Name = "UICornerr"
-UICornerr.Parent = Frame
 
 version.Name = "version"
 version.Parent = Frame
@@ -224,9 +242,77 @@ version.BorderSizePixel = 0
 version.Position = UDim2.new(0.0675675645, 0, 0.886904776, 0)
 version.Size = UDim2.new(0, 82, 0, 19)
 version.Font = Enum.Font.SourceSans
-version.Text = "Current version: 1.42"
+version.Text = "Current version: 1.6b"
 version.TextColor3 = Color3.fromRGB(0, 0, 0)
 version.TextSize = 14.000
+
+secondgui.Parent = Frame
+secondgui.BackgroundColor3 = Color3.fromRGB(255, 177, 42)
+secondgui.Position = UDim2.new(-0.0135135138, 0, 0, 0)
+secondgui.Size = UDim2.new(0, 225, 0, 175)
+secondgui.Visible = false
+
+cookdayni.Name = "cookdayni"
+cookdayni.Parent = secondgui
+cookdayni.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+cookdayni.BorderSizePixel = 0
+cookdayni.Position = UDim2.new(0.146666661, 0, 0.125714272, 0)
+cookdayni.Size = UDim2.new(0, 159, 0, 45)
+cookdayni.Font = Enum.Font.SourceSans
+cookdayni.Text = "Use sink in night, cook in day"
+cookdayni.TextColor3 = Color3.fromRGB(0, 0, 0)
+cookdayni.TextSize = 14.000
+
+UICorner_2.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_2.Parent = cookdayni
+
+stationselcookday.Name = "stationselcookday"
+stationselcookday.Parent = secondgui
+stationselcookday.BackgroundColor3 = Color3.fromRGB(205, 255, 140)
+stationselcookday.BorderSizePixel = 0
+stationselcookday.Position = UDim2.new(0.271111131, 0, 0.685714245, 0)
+stationselcookday.Size = UDim2.new(0, 94, 0, 29)
+stationselcookday.Font = Enum.Font.SourceSans
+stationselcookday.Text = "Station: x"
+stationselcookday.TextColor3 = Color3.fromRGB(0, 0, 0)
+stationselcookday.TextSize = 14.000
+
+UICorner_3.CornerRadius = UDim.new(0.0799999982, 0)
+UICorner_3.Parent = stationselcookday
+
+guifir.Name = "guifir"
+guifir.Parent = secondgui
+guifir.BackgroundColor3 = Color3.fromRGB(255, 140, 73)
+guifir.Position = UDim2.new(0.915555537, 0, -6.51925802e-09, 0)
+guifir.Size = UDim2.new(0, 19, 0, 20)
+guifir.Font = Enum.Font.SourceSans
+guifir.Text = "1"
+guifir.TextColor3 = Color3.fromRGB(0, 0, 0)
+guifir.TextSize = 14.000
+
+UICorner_4.CornerRadius = UDim.new(0.5, 0)
+UICorner_4.Parent = guifir
+
+UICorner_5.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_5.Parent = secondgui
+
+secgui.Name = "secgui"
+secgui.Parent = Frame
+secgui.Active = false
+secgui.BackgroundColor3 = Color3.fromRGB(255, 140, 73)
+secgui.Position = UDim2.new(0.918918967, 0, -2.79396772e-08, 0)
+secgui.Size = UDim2.new(0, 19, 0, 20)
+secgui.Font = Enum.Font.SourceSans
+secgui.Text = "2"
+secgui.TextColor3 = Color3.fromRGB(0, 0, 0)
+secgui.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(0.5, 0)
+UICorner_6.Parent = secgui
+
+assadsa.CornerRadius = UDim.new(0.0599999987, 0)
+assadsa.Name = "assadsa"
+assadsa.Parent = Frame
 
 -------------------------------------------------------------------------
 
@@ -243,6 +329,14 @@ tplol.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
 tpenables = true
 tognight = true
 dontcooknight.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+secondgui.Active = true
+secondgui.Visible = false
+alreadytpeda = false
+alreadytpedd = false
+cookdayni.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+cookingnightday = false
+stguisecmiddle = false
+stationselcookday.Text = 'Station: Spawn'
 togglecook.MouseButton1Click:Connect(function()
     if stopped == false then
         stopped = true
@@ -300,17 +394,17 @@ spawn(function()
        
        if Player.attributes.Energy.Value == 0 then
     _G.FireClickers = false;
-    wait(0.2)
+    wait(0.03)
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11)
     repeat wait() until Player.attributes.Energy.Value == 200
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    wait(0.5)
+    wait(0.2)
     if secondstation == false then
         Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
     else
         Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
     end
-    wait(0.2)
+    wait(0.03)
     if stoppeds == true then break end
     _G.FireClickers = true; -- Start
        end
@@ -318,7 +412,7 @@ spawn(function()
        if stoppeds == true then break end
        if tognight == true then
        if cantcook == true then
-        wait(0.1)
+        wait(0.03)
             
            
         else
@@ -368,7 +462,7 @@ togglesink.MouseButton1Click:Connect(function()
         stopped = false
         togglesink_Roundify_4px.ImageColor3=Color3.new(0.482353, 1, 0.811765)
         if tpenables == true then
-        wait(0.1)
+        wait(0.03)
         Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711) 
         end
     end
@@ -398,17 +492,17 @@ spawn(function()
        
        if Player.attributes.Energy.Value == 0 then 
     _G.FireClicker = false; 
-    wait(0.2)
+    wait(0.03)
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11) 
     repeat wait() until Player.attributes.Energy.Value == 200 
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    wait(0.5)
+    wait(0.2)
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711) 
     wait(0.2)
     if stopped == true then break end
     _G.FireClicker = true; 
        end
-       wait(0.01)
+       wait(0.03)
        if stopped == true then break end
        
        for index, descendant in pairs(descendants) do
@@ -481,7 +575,161 @@ dontcooknight.MouseButton1Click:Connect(function()
 
 end)
 
+secgui.MouseButton1Click:Connect(function()
+    secgui.Visible = false
+    dontcooknight.Visible = false
+    midst.Visible = false
+    spawnst.Visible = false
+    spawnst.Visible = false
+    togglecook.Visible = false
+    togglesink.Visible = false
+    tplol.Visible = false
+    secondgui.Visible = true
+end)
 
+guifir.MouseButton1Click:Connect(function()
+    secondgui.Visible = false
+    secgui.Visible = true
+    dontcooknight.Visible = true
+    midst.Visible = true
+    spawnst.Visible = true
+    spawnst.Visible = true
+    togglecook.Visible = true
+    togglesink.Visible = true
+    tplol.Visible = true
+
+end)
+
+
+stationselcookday.MouseButton1Click:Connect(function()
+    if stguisecmiddle == true then
+        stguisecmiddle = false
+        stationselcookday.Text = 'Station: Spawn'
+    else
+        stguisecmiddle = true
+        stationselcookday.Text = 'Station: Middle'
+    end
+end)
+
+
+cookdayni.MouseButton1Click:Connect(function()
+    if cookingnightday == false then
+        cookdayni.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+        cookingnightday = true
+            wait(0.03)
+            if cantcook == true then
+                Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
+            else
+            if stguisecmiddle == false then
+                Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
+            else
+                Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
+            end
+        end
+    else
+        cookdayni.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+        cookingnightday = false
+        _G.FireClickere = false
+
+
+    end
+
+
+    if cookingnightday == false then 
+        _G.FireClickere = false
+
+    end
+     
+    wait(0.23)
+-------------------------------------------------------------
+
+
+local descendants = game.Workspace.Game:GetDescendants()
+local Player = game.Players.LocalPlayer
+
+_G.FireClickere = true;
+
+spawn(function()
+
+
+   while _G.FireClickere do
+
+    while true do
+        wait(0.01)
+        if cookingnightday == false then break end
+
+       
+       
+       if Player.attributes.Energy.Value == 0 then
+    _G.FireClickere = false;
+    wait(0.03)
+    Player.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 38.8000145, -11)
+    repeat wait() until Player.attributes.Energy.Value == 200
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+    wait(0.2)
+   --
+   if cantcook == true then
+    Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
+   else
+    if stguisecmiddle == false then
+        Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
+    else
+        Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
+    end
+    end
+    wait(0.05)
+    if cookingnightday == false then break end
+    _G.FireClickere = true; 
+       end
+       wait()
+       if cookingnightday == false then break end
+       if cantcook == true then
+        wait(0.01)
+        if alreadytpedd == false then
+            wait(0.2)
+            Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
+            alreadytpedd = true
+            alreadytpeda = false
+            wait(0.1)
+        end
+        
+        
+        
+        for index, descendant in pairs(descendants) do
+            if descendant.Name == "Water2" then 
+               local sink = descendant.Parent;
+               local clickyofsink = sink:FindFirstChildOfClass("ClickDetector") 
+               fireclickdetector(clickyofsink); 
+            end
+        end
+           
+        else
+        if alreadytpeda == false then
+            wait(0.2)
+            if stguisecmiddle == false then
+                Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
+            else
+                Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
+            end
+            alreadytpeda = true
+            alreadytpedd = false
+            wait(0.1)
+        end
+       
+       for index, descendant in pairs(descendants) do
+        if descendant.Name == "Spawn2" then 
+           local cookstation = descendant.Parent;
+           local clickyofcookstation = cookstation:FindFirstChildOfClass("ClickDetector") 
+           fireclickdetector(clickyofcookstation); 
+        end
+       end
+   end
+
+end
+end
+end)
+--------------------------------------------------
+end)
 
 function onKeyPress(inputObject, gameProcessedEvent)
     if inputObject.KeyCode == Enum.KeyCode.Home then
@@ -493,6 +741,7 @@ function onKeyPress(inputObject, gameProcessedEvent)
             end
         end
     end
+    
     
     game:GetService("UserInputService").InputBegan:connect(onKeyPress)
 
