@@ -61,7 +61,7 @@ spawn(function()
             alreadytpeda = false
             Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
             wait(0.1)
-        end
+        else
 
 
 
@@ -71,6 +71,7 @@ spawn(function()
                local clickyofsink = sink:FindFirstChildOfClass("ClickDetector")
                fireclickdetector(clickyofsink);
             end
+        end
         end
 
         else
@@ -83,7 +84,7 @@ spawn(function()
                 Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
             end
             wait(0.1)
-        end
+        else
 
        for index, descendant in pairs(descendants) do
         if descendant.Name == "Spawn2" then
@@ -92,6 +93,7 @@ spawn(function()
            fireclickdetector(clickyofcookstation);
         end
        end
+        end
    end
 
 end
