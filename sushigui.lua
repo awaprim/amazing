@@ -19,6 +19,7 @@ else
 
 
 local Player = game.Players.LocalPlayer
+local l__BuyStockEvent__1 = game.ReplicatedStorage.BuyStockEvent
 
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -41,17 +42,22 @@ local uslesssss = Instance.new("TextLabel")
 local uselesss = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
 local version = Instance.new("TextLabel")
-local secondgui = Instance.new("Frame")
-local cookdayni = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local stationselcookday = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local guifir = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local UICorner_5 = Instance.new("UICorner")
 local secgui = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
+local secondgui = Instance.new("ImageLabel")
+local cookdayni = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local stationselcookday = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local guifir = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
-local assadsa = Instance.new("UICorner")
+local Autobuyrice = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Autobuyfish = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Autobuymush = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
@@ -242,59 +248,9 @@ version.BorderSizePixel = 0
 version.Position = UDim2.new(0.0675675645, 0, 0.886904776, 0)
 version.Size = UDim2.new(0, 82, 0, 19)
 version.Font = Enum.Font.SourceSans
-version.Text = "Current version: 1.6b"
+version.Text = "Current version: 1.7"
 version.TextColor3 = Color3.fromRGB(0, 0, 0)
 version.TextSize = 14.000
-
-secondgui.Parent = Frame
-secondgui.BackgroundColor3 = Color3.fromRGB(255, 177, 42)
-secondgui.Position = UDim2.new(-0.0135135138, 0, 0, 0)
-secondgui.Size = UDim2.new(0, 225, 0, 175)
-secondgui.Visible = false
-
-cookdayni.Name = "cookdayni"
-cookdayni.Parent = secondgui
-cookdayni.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
-cookdayni.BorderSizePixel = 0
-cookdayni.Position = UDim2.new(0.146666661, 0, 0.125714272, 0)
-cookdayni.Size = UDim2.new(0, 159, 0, 45)
-cookdayni.Font = Enum.Font.SourceSans
-cookdayni.Text = "Use sink in night, cook in day"
-cookdayni.TextColor3 = Color3.fromRGB(0, 0, 0)
-cookdayni.TextSize = 14.000
-
-UICorner_2.CornerRadius = UDim.new(0.100000001, 0)
-UICorner_2.Parent = cookdayni
-
-stationselcookday.Name = "stationselcookday"
-stationselcookday.Parent = secondgui
-stationselcookday.BackgroundColor3 = Color3.fromRGB(205, 255, 140)
-stationselcookday.BorderSizePixel = 0
-stationselcookday.Position = UDim2.new(0.271111131, 0, 0.685714245, 0)
-stationselcookday.Size = UDim2.new(0, 94, 0, 29)
-stationselcookday.Font = Enum.Font.SourceSans
-stationselcookday.Text = "Station: x"
-stationselcookday.TextColor3 = Color3.fromRGB(0, 0, 0)
-stationselcookday.TextSize = 14.000
-
-UICorner_3.CornerRadius = UDim.new(0.0799999982, 0)
-UICorner_3.Parent = stationselcookday
-
-guifir.Name = "guifir"
-guifir.Parent = secondgui
-guifir.BackgroundColor3 = Color3.fromRGB(255, 140, 73)
-guifir.Position = UDim2.new(0.915555537, 0, -6.51925802e-09, 0)
-guifir.Size = UDim2.new(0, 19, 0, 20)
-guifir.Font = Enum.Font.SourceSans
-guifir.Text = "1"
-guifir.TextColor3 = Color3.fromRGB(0, 0, 0)
-guifir.TextSize = 14.000
-
-UICorner_4.CornerRadius = UDim.new(0.5, 0)
-UICorner_4.Parent = guifir
-
-UICorner_5.CornerRadius = UDim.new(0.100000001, 0)
-UICorner_5.Parent = secondgui
 
 secgui.Name = "secgui"
 secgui.Parent = Frame
@@ -307,12 +263,107 @@ secgui.Text = "2"
 secgui.TextColor3 = Color3.fromRGB(0, 0, 0)
 secgui.TextSize = 14.000
 
-UICorner_6.CornerRadius = UDim.new(0.5, 0)
-UICorner_6.Parent = secgui
+UICorner_2.CornerRadius = UDim.new(0.5, 0)
+UICorner_2.Parent = secgui
 
-assadsa.CornerRadius = UDim.new(0.0599999987, 0)
-assadsa.Name = "assadsa"
-assadsa.Parent = Frame
+UICorner_3.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_3.Parent = Frame
+
+secondgui.Name = "secondgui"
+secondgui.Parent = Frame
+secondgui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+secondgui.BackgroundTransparency = 1.000
+secondgui.Position = UDim2.new(-0.00900900923, 0, 0, 0)
+secondgui.Size = UDim2.new(0, 225, 0, 177)
+secondgui.Visible = false
+secondgui.Image = "rbxassetid://3570695787"
+secondgui.ImageColor3 = Color3.fromRGB(255, 177, 42)
+secondgui.ScaleType = Enum.ScaleType.Slice
+secondgui.SliceCenter = Rect.new(100, 100, 100, 100)
+secondgui.SliceScale = 0.060
+
+cookdayni.Name = "cookdayni"
+cookdayni.Parent = secondgui
+cookdayni.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+cookdayni.BorderSizePixel = 0
+cookdayni.Position = UDim2.new(0.146666661, 0, 0.125714272, 0)
+cookdayni.Size = UDim2.new(0, 159, 0, 45)
+cookdayni.Font = Enum.Font.SourceSans
+cookdayni.Text = "Use sink in night in day cooking"
+cookdayni.TextColor3 = Color3.fromRGB(0, 0, 0)
+cookdayni.TextSize = 14.000
+
+UICorner_4.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_4.Parent = cookdayni
+
+stationselcookday.Name = "stationselcookday"
+stationselcookday.Parent = secondgui
+stationselcookday.BackgroundColor3 = Color3.fromRGB(205, 255, 140)
+stationselcookday.BorderSizePixel = 0
+stationselcookday.Position = UDim2.new(0.293333352, 0, 0.719612539, 0)
+stationselcookday.Size = UDim2.new(0, 94, 0, 29)
+stationselcookday.Font = Enum.Font.SourceSans
+stationselcookday.Text = "Station: x"
+stationselcookday.TextColor3 = Color3.fromRGB(0, 0, 0)
+stationselcookday.TextSize = 14.000
+
+UICorner_5.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_5.Parent = stationselcookday
+
+guifir.Name = "guifir"
+guifir.Parent = secondgui
+guifir.BackgroundColor3 = Color3.fromRGB(255, 140, 73)
+guifir.Position = UDim2.new(0.915555537, 0, -6.51925802e-09, 0)
+guifir.Size = UDim2.new(0, 19, 0, 20)
+guifir.Font = Enum.Font.SourceSans
+guifir.Text = "1"
+guifir.TextColor3 = Color3.fromRGB(0, 0, 0)
+guifir.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(0.5, 0)
+UICorner_6.Parent = guifir
+
+Autobuyrice.Name = "Autobuyrice"
+Autobuyrice.Parent = secondgui
+Autobuyrice.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+Autobuyrice.BorderSizePixel = 0
+Autobuyrice.Position = UDim2.new(0.0088888891, 0, 0.554156601, 0)
+Autobuyrice.Size = UDim2.new(0, 70, 0, 23)
+Autobuyrice.Font = Enum.Font.SourceSans
+Autobuyrice.Text = "Auto buy 🍚"
+Autobuyrice.TextColor3 = Color3.fromRGB(0, 0, 0)
+Autobuyrice.TextSize = 14.000
+
+UICorner_7.CornerRadius = UDim.new(0, 4)
+UICorner_7.Parent = Autobuyrice
+
+Autobuyfish.Name = "Autobuyfish"
+Autobuyfish.Parent = secondgui
+Autobuyfish.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+Autobuyfish.BorderSizePixel = 0
+Autobuyfish.Position = UDim2.new(0.347000003, 0, 0.55400002, 0)
+Autobuyfish.Size = UDim2.new(0, 70, 0, 23)
+Autobuyfish.Font = Enum.Font.SourceSans
+Autobuyfish.Text = "Auto buy 🐟"
+Autobuyfish.TextColor3 = Color3.fromRGB(0, 0, 0)
+Autobuyfish.TextSize = 14.000
+
+UICorner_8.CornerRadius = UDim.new(0, 4)
+UICorner_8.Parent = Autobuyfish
+
+Autobuymush.Name = "Autobuymush"
+Autobuymush.Parent = secondgui
+Autobuymush.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+Autobuymush.BorderSizePixel = 0
+Autobuymush.Position = UDim2.new(0.684444547, 0, 0.553672314, 0)
+Autobuymush.Size = UDim2.new(0, 70, 0, 23)
+Autobuymush.Font = Enum.Font.SourceSans
+Autobuymush.Text = "Auto buy 🍄"
+Autobuymush.TextColor3 = Color3.fromRGB(0, 0, 0)
+Autobuymush.TextSize = 14.000
+
+UICorner_9.CornerRadius = UDim.new(0, 4)
+UICorner_9.Parent = Autobuymush
 
 -------------------------------------------------------------------------
 
@@ -337,6 +388,12 @@ cookdayni.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
 cookingnightday = false
 stguisecmiddle = false
 stationselcookday.Text = 'Station: Spawn'
+buyfish = false
+buymush = false
+buyrice = false
+Autobuyfish.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+Autobuymush.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+Autobuyrice.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
 togglecook.MouseButton1Click:Connect(function()
     if stopped == false then
         stopped = true
@@ -731,6 +788,35 @@ end)
 --------------------------------------------------
 end)
 
+
+Autobuyrice.MouseButton1Click:Connect(function()
+    if buyrice == true then
+        buyrice = false
+        Autobuyrice.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+    else
+        buyrice = true
+        Autobuyrice.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+    end
+end)
+Autobuymush.MouseButton1Click:Connect(function()
+    if buymush == true then
+        buymush = false
+        Autobuymush.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+    else
+        buymush = true
+        Autobuymush.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+    end
+end)
+Autobuyfish.MouseButton1Click:Connect(function()
+    if buyfish == true then
+        buyfish = false
+        Autobuyfish.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
+    else
+        buyfish = true
+        Autobuyfish.BackgroundColor3 = Color3.fromRGB(123, 255, 207)
+    end
+end)
+
 function onKeyPress(inputObject, gameProcessedEvent)
     if inputObject.KeyCode == Enum.KeyCode.Home then
         if closed == true then return end
@@ -760,7 +846,52 @@ function onKeyPress(inputObject, gameProcessedEvent)
 
 
 while true do
-    wait(0.1)
+    wait(0.25)
+    if buymush == true then
+        
+        if game:GetService("Workspace").CounterVegi.Imp.SurfaceGui.Vegetable.Text == '🍄 0/1000' then
+            l__BuyStockEvent__1:FireServer(93273987, 2)
+            wait(0.5)
+        end
+        if game:GetService("Workspace").CounterVegi.Imp.SurfaceGui.Vegetable.Text == '🍄 -1/1000' then
+            l__BuyStockEvent__1:FireServer(93273987, 2)
+            wait(0.5)
+        end
+        if game:GetService("Workspace").CounterVegi.Imp.SurfaceGui.Vegetable.Text == '🍄 1/1000' then
+            l__BuyStockEvent__1:FireServer(93273987, 2)
+            wait(0.5)
+        end
+        end
+        if buyrice == true then
+            
+        if game:GetService("Workspace").CounterRice.Imp.SurfaceGui.Rice.Text == '🍚 0/1000' then
+            l__BuyStockEvent__1:FireServer(93273987, 4)
+            wait(0.5)
+        end
+        if game:GetService("Workspace").CounterRice.Imp.SurfaceGui.Rice.Text == '🍚 -1/1000' then
+            l__BuyStockEvent__1:FireServer(93273987, 4)
+            wait(0.5)
+        end
+        if game:GetService("Workspace").CounterRice.Imp.SurfaceGui.Rice.Text == '🍚 1/1000' then
+            l__BuyStockEvent__1:FireServer(93273987, 4)
+            wait(0.5)
+        end
+        end
+        if buyfish == true then
+            
+        if game:GetService("Workspace").CounterFish.Imp.SurfaceGui.Fish.Text == '🐟 0/1000' then
+            l__BuyStockEvent__1:FireServer(93273987, 6)
+            wait(0.5)
+        end
+        if game:GetService("Workspace").CounterFish.Imp.SurfaceGui.Fish.Text == '🐟 -1/1000' then
+            l__BuyStockEvent__1:FireServer(93273987, 6)
+            wait(0.5)
+        end
+        if game:GetService("Workspace").CounterFish.Imp.SurfaceGui.Fish.Text == '🐟 1/1000' then
+            l__BuyStockEvent__1:FireServer(93273987, 6)
+            wait(0.5)
+        end
+    end
     if game:GetService("Workspace").Time.SurfaceGui.TextLabel.Text == '11:00 PM' then
         cantcook = true
        end
