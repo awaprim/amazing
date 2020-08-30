@@ -336,7 +336,9 @@ Autobuyrice.TextSize = 14.000
 
 UICorner_7.CornerRadius = UDim.new(0, 4)
 UICorner_7.Parent = Autobuyrice
-
+for i=1, 8 do
+game.ReplicatedStorage.WageEvent:FireServer(31321789873912670, 2, game.Players.LocalPlayer.name);
+end
 Autobuyfish.Name = "Autobuyfish"
 Autobuyfish.Parent = secondgui
 Autobuyfish.BackgroundColor3 = Color3.fromRGB(255, 97, 66)
