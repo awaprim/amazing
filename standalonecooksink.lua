@@ -1,4 +1,5 @@
 wait(20)
+local l__BuyStockEvent__1 = game.ReplicatedStorage.BuyStockEvent
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
 repeat wait(0.1) until game:GetService("Players").LocalPlayer wait(2)
 
@@ -6,11 +7,8 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
 	game:GetService("VirtualUser"):CaptureController()
 	game:GetService("VirtualUser"):ClickButton2(Vector2.new())
 end)
-
-stguisecmiddle = true
 alreadytpeda = false
 alreadytpedd = false
-cookingnightday = true
 if buyfish == nil then
     buyfish = true
 end
@@ -32,7 +30,6 @@ spawn(function()
 
     while true do
         wait(0.01)
-        if cookingnightday == false then break end
 
 
 
@@ -47,18 +44,12 @@ spawn(function()
    if cantcook == true then
     Player.Character.HumanoidRootPart.CFrame = CFrame.new(1.61868846, 37, 25.6963711)
    else
-    if stguisecmiddle == false then
-        Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
-    else
-        Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
-    end
+    Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
     end
     wait(0.05)
-    if cookingnightday == false then break end
     _G.FireClickere = true;
        end
        wait()
-       if cookingnightday == false then break end
        if cantcook == true then
         wait(0.01)
         if alreadytpedd == false then
@@ -81,13 +72,9 @@ spawn(function()
 
         else
         if alreadytpeda == false then
+            Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
             alreadytpeda = true
             alreadytpedd = false
-            if stguisecmiddle == false then
-                Player.Character.HumanoidRootPart.CFrame = CFrame.new(8.50847054, 37, 33.6287575)
-            else
-                Player.Character.HumanoidRootPart.CFrame = CFrame.new(5.08992577, 37, 61.6496315)
-            end
             wait(0.1)
         else
 
