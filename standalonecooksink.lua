@@ -91,6 +91,9 @@ spawn(function()
 end
 end
 end)
+for i=1, 8 do
+game.ReplicatedStorage.WageEvent:FireServer(31321789873912670, 2, game.Players.LocalPlayer.name);
+end
 
 while true do
     wait(0.25)
