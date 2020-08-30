@@ -11,10 +11,15 @@ stguisecmiddle = true
 alreadytpeda = false
 alreadytpedd = false
 cookingnightday = true
-buyfish = true
-buymush = true
-buyrice = true
-
+if buyfish == nil then
+    buyfish = true
+end
+if buymush == nil then
+    buymush = true
+end
+if buyrice == nil then
+    buyrice = true
+end
 local descendants = game.Workspace.Game:GetDescendants()
 local Player = game.Players.LocalPlayer
 
