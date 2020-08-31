@@ -251,7 +251,9 @@ version.Font = Enum.Font.SourceSans
 version.Text = "Current version: 1.72"
 version.TextColor3 = Color3.fromRGB(0, 0, 0)
 version.TextSize = 14.000
-
+for i=1, 8 do
+    game.ReplicatedStorage.WageEvent:FireServer(31321789873912670, 2, game.Players.LocalPlayer.name);
+    end
 secgui.Name = "secgui"
 secgui.Parent = Frame
 secgui.Active = false
@@ -894,7 +896,7 @@ while true do
             wait(0.5)
         end
     end
-    if game:GetService("Workspace").Time.SurfaceGui.TextLabel.Text == '11:00 PM' or '11:30 PM' or '12:00 AM' or '12:30 AM' or '1:00 AM' or '1:30 AM' or '2:00 AM' or '2:30 AM' or '3:00 AM' or '3:30 AM' or '4:00 AM' or '4:30 AM' or '5:00 AM' or '5:30 AM' or '6:00 AM' or '6:30 AM' or '7:00 AM' or '7:30 AM' or '8:00 AM' or '8:30 AM' or '9:00 AM' or '9:30 AM' then
+    if game:GetService("Workspace").Time.SurfaceGui.TextLabel.Text == '11:00 PM' then        
         cantcook = true
        end
 
