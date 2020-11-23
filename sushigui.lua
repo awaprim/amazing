@@ -1,3 +1,5 @@
+-- this script is to this game
+-- https://www.roblox.com/games/3769248453/sushi-shop-simulator
 if _G.loadedgui == true then
     wait(1)
     game.StarterGui:SetCore("SendNotification", {
