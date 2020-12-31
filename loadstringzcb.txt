@@ -1,1 +1,1 @@
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/awaprimPL/amazing/master/driving%20empire%20presents%20%5B1%5D.lua'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/awaprimPL/amazing/master/counterblox.lua'),true))()
